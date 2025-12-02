@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mehmet Alp Arslan - Ekonometri öğrencisi ve Freelance yazılım geliştiricisi. Mobil uygulama ve web sitesi geliştirme hizmetleri.">
+    <meta name="keywords" content="freelance developer, mobile app development, web development, ekonometri, Ankara">
+    <meta name="author" content="Mehmet Alp Arslan">
+    <meta property="og:title" content="Mehmet Alp Arslan - Portfolio">
+    <meta property="og:description" content="Ekonometri öğrencisi & Freelance geliştirici">
+    <meta property="og:type" content="website">
+    <title>Mehmet Alp Arslan - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">Mehmet Alp Arslan</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+                <li><a href="#about" class="nav-link" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                <li><a href="#services" class="nav-link" data-tr="Hizmetler" data-en="Services">Hizmetler</a></li>
+                <li><a href="#portfolio" class="nav-link" data-tr="Projeler" data-en="Portfolio">Projeler</a></li>
+                <li><a href="#contact" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+            </ul>
+            
+            <div class="nav-controls">
+                <!-- Language Toggle -->
+                <button class="lang-toggle" id="langToggle" aria-label="Change Language">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">EN</span>
+                </button>
+                
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="animated-bg"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting" data-tr="Merhaba, ben" data-en="Hello, I'm">Merhaba, ben</span>
+                    <span class="name">Mehmet Alp Arslan</span>
+                </h1>
+                <p class="hero-subtitle" data-tr="Ankara Hacı Bayram Veli Üniversitesi Ekonometri öğrencisi ve freelance yazılım geliştiriciyim. Mobil uygulama, web sitesi ve işletme yazılımları geliştiriyorum." data-en="Econometrics student at Ankara Hacı Bayram Veli University and freelance software developer. I develop mobile applications, websites and business software.">
+                    Ankara Hacı Bayram Veli Üniversitesi Ekonometri öğrencisi ve freelance yazılım geliştiriciyim. Mobil uygulama, web sitesi ve işletme yazılımları geliştiriyorum.
+                </p>
+                <a href="#contact" class="btn btn-primary" data-tr="Benimle İletişime Geç" data-en="Get In Touch">
+                    Benimle İletişime Geç
+                </a>
+                
+                <div class="social-links">
+                    <a href="https://github.com/mehmetalparslan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mehmet-alp-arslan-504688331/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/mehmetalparslan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro" data-tr="Merhaba! Ben Ankara Hacı Bayram Veli Üniversitesi Ekonometri Bölümü 3. sınıf öğrencisiyim." data-en="Hello! I'm a 3rd year Econometrics student at Ankara Hacı Bayram Veli University.">
+                        Merhaba! Ben Ankara Hacı Bayram Veli Üniversitesi Ekonometri Bölümü 3. sınıf öğrencisiyim.
+                    </p>
+                    <p data-tr="Ekonometri eğitimimin yanı sıra, yazılım geliştirme tutkuyla ilgileniyorum. Mobil uygulama geliştirme ve web tasarımı alanlarında kendimi geliştirerek, freelance projeler üzerinde çalışıyorum." data-en="Alongside my econometrics education, I'm passionate about software development. I develop myself in mobile app development and web design, working on freelance projects.">
+                        Ekonometri eğitimimin yanı sıra, yazılım geliştirme tutkuyla ilgileniyorum. Mobil uygulama geliştirme ve web tasarımı alanlarında kendimi geliştirerek, freelance projeler üzerinde çalışıyorum.
+                    </p>
+                    <p data-tr="Hedefim, analitik düşünce yapımı ve teknik becerilerimi birleştirerek, kullanıcı odaklı ve etkili çözümler üretmek. Modern teknolojileri öğrenmek ve projelerimde uygulamak beni sürekli motive ediyor." data-en="My goal is to combine analytical thinking and technical skills to create user-focused and effective solutions. Learning modern technologies and applying them in my projects keeps me constantly motivated.">
+                        Hedefim, analitik düşünce yapımı ve teknik becerilerimi birleştirerek, kullanıcı odaklı ve etkili çözümler üretmek. Modern teknolojileri öğrenmek ve projelerimde uygulamak beni sürekli motive ediyor.
+                    </p>
+                    
+                    <div class="skills">
+                        <h3 data-tr="Teknolojiler" data-en="Technologies">Teknolojiler</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Stata</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="about-shape"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-tr="Hizmetler" data-en="Services">Hizmetler</h2>
+            <p class="section-subtitle" data-tr="Size sunduğum profesyonel hizmetler" data-en="Professional services I offer">
+                Size sunduğum profesyonel hizmetler
+            </p>
+            
+            <div class="services-modern-grid">
+                <div class="service-modern-card">
+                    <div class="service-modern-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-tr="Mobil Uygulama Geliştirme" data-en="Mobile App Development">Mobil Uygulama Geliştirme</h3>
+                    <p data-tr="iOS ve Android platformları için Flutter teknolojisi ile performanslı ve kullanıcı dostu mobil uygulamalar geliştiriyorum." data-en="I develop high-performance and user-friendly mobile applications for iOS and Android platforms using Flutter technology.">
+                        iOS ve Android platformları için Flutter teknolojisi ile performanslı ve kullanıcı dostu mobil uygulamalar geliştiriyorum.
+                    </p>
+                </div>
+                
+                <div class="service-modern-card">
+                    <div class="service-modern-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-tr="Web Sitesi Geliştirme" data-en="Web Development">Web Sitesi Geliştirme</h3>
+                    <p data-tr="Kurumsal web siteleri, e-ticaret platformları ve özel web uygulamaları tasarlıyor ve geliştiriyorum." data-en="I design and develop corporate websites, e-commerce platforms and custom web applications.">
+                        Kurumsal web siteleri, e-ticaret platformları ve özel web uygulamaları tasarlıyor ve geliştiriyorum.
+                    </p>
+                </div>
+                
+                <div class="service-modern-card">
+                    <div class="service-modern-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3 data-tr="QR Menü Sistemleri" data-en="QR Menu Systems">QR Menü Sistemleri</h3>
+                    <p data-tr="Restoranlar ve kafeler için modern, temassız dijital menü çözümleri sunuyorum." data-en="I offer modern, contactless digital menu solutions for restaurants and cafes.">
+                        Restoranlar ve kafeler için modern, temassız dijital menü çözümleri sunuyorum.
+                    </p>
+                </div>
+                
+                <div class="service-modern-card">
+                    <div class="service-modern-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 data-tr="Kafe & Restoran Yazılımları" data-en="Cafe & Restaurant Software">Kafe & Restoran Yazılımları</h3>
+                    <p data-tr="Sipariş yönetimi, masa takibi ve stok kontrolü için entegre yazılım çözümleri geliştiriyorum." data-en="I develop integrated software solutions for order management, table tracking and inventory control.">
+                        Sipariş yönetimi, masa takibi ve stok kontrolü için entegre yazılım çözümleri geliştiriyorum.
+                    </p>
+                </div>
+                
+                <div class="service-modern-card">
+                    <div class="service-modern-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 data-tr="İşletme Otomasyon" data-en="Business Automation">İşletme Otomasyon</h3>
+                    <p data-tr="İş süreçlerinizi dijitalleştiren ve otomatikleştiren özel yazılımlar üretiyorum." data-en="I produce custom software that digitizes and automates your business processes.">
+                        İş süreçlerinizi dijitalleştiren ve otomatikleştiren özel yazılımlar üretiyorum.
+                    </p>
+                </div>
+                
+                <div class="service-modern-card">
+                    <div class="service-modern-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 data-tr="UI/UX Tasarım" data-en="UI/UX Design">UI/UX Tasarım</h3>
+                    <p data-tr="Kullanıcı deneyimini ön planda tutan, modern ve estetik arayüz tasarımları oluşturuyorum." data-en="I create modern and aesthetic interface designs that prioritize user experience.">
+                        Kullanıcı deneyimini ön planda tutan, modern ve estetik arayüz tasarımları oluşturuyorum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-tr="Projeler" data-en="Portfolio">Projeler</h2>
+            <p class="section-subtitle" data-tr="Son çalışmalarım ve projelerim" data-en="My recent works and projects">
+                Son çalışmalarım ve projelerim
+            </p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-logo">
+                        <div class="portfolio-logo-container">
+                            <img src="assets/logomindsy.png" alt="Mindsy Logo">
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <i class="fas fa-gamepad"></i>
+                            <h3 data-tr="Mindsy - Hafıza Oyunu" data-en="Mindsy - Memory Game">Mindsy - Hafıza Oyunu</h3>
+                        </div>
+                        <p data-tr="Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi. Yakında App Store ve Google Play Store'da!" data-en="Fun and brain-boosting memory game app. Interactive gaming experience designed for kids and adults to strengthen memory. Coming soon to App Store and Google Play Store!">
+                            Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi. Yakında App Store ve Google Play Store'da!
+                        </p>
+                        <div class="portfolio-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>iOS</span>
+                            <span>Android</span>
+                            <span>Mobile Game</span>
+                        </div>
+                        <div class="store-badges">
+                            <span class="coming-soon-badge" data-tr="Yakında App Store'da" data-en="Coming Soon to App Store">
+                                <i class="fab fa-apple"></i> Yakında
+                            </span>
+                            <span class="coming-soon-badge" data-tr="Yakında Google Play'de" data-en="Coming Soon to Google Play">
+                                <i class="fab fa-google-play"></i> Yakında
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-logo">
+                        <div class="portfolio-logo-container">
+                            <img src="assets/vebetlogo kopyası.png" alt="VEBET Logo">
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <i class="fas fa-brain"></i>
+                            <h3 data-tr="VEBET - Veri Bilimi ve Ekonometri Topluluğu" data-en="VEBET - Data Science and Econometrics Community">VEBET - Veri Bilimi ve Ekonometri Topluluğu</h3>
+                        </div>
+                        <p data-tr="Ankara Hacı Bayram Veli Üniversitesi öğrenci topluluğu için modern, responsive ve SEO uyumlu web sitesi. Yapay zeka, veri bilimi ve ekonometri odaklı içerik yönetim sistemi." data-en="Modern, responsive and SEO-friendly website for Ankara Hacı Bayram Veli University student community. AI, data science and econometrics focused content management system.">
+                            Ankara Hacı Bayram Veli Üniversitesi öğrenci topluluğu için modern, responsive ve SEO uyumlu web sitesi. Yapay zeka, veri bilimi ve ekonometri odaklı içerik yönetim sistemi.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                            <span>SEO</span>
+                        </div>
+                        <a href="https://veribilimveekonometri.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fas fa-globe"></i>
+                            <span data-tr="Web Sitesini Ziyaret Et" data-en="Visit Website">Web Sitesini Ziyaret Et</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-logo">
+                        <div class="portfolio-logo-container">
+                            <img src="assets/logo kopyası.png" alt="Bağoğlu Hafriyat Logo">
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <i class="fas fa-hard-hat"></i>
+                            <h3 data-tr="Bağoğlu Hafriyat - İş Makinesi Kiralama" data-en="Bağoğlu Hafriyat - Construction Equipment Rental">Bağoğlu Hafriyat - İş Makinesi Kiralama</h3>
+                        </div>
+                        <p data-tr="25+ yıllık tecrübeli hafriyat firması için profesyonel kurumsal web sitesi. Online teklif sistemi, hizmet katalogu ve iletişim entegrasyonu ile tam teşekküllü dijital platform." data-en="Professional corporate website for 25+ years experienced excavation company. Full-featured digital platform with online quotation system, service catalog and contact integration.">
+                            25+ yıllık tecrübeli hafriyat firması için profesyonel kurumsal web sitesi. Online teklif sistemi, hizmet katalogu ve iletişim entegrasyonu ile tam teşekküllü dijital platform.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>WhatsApp API</span>
+                            <span>Responsive</span>
+                        </div>
+                        <a href="https://ankarakanalkiralikkepce.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fas fa-globe"></i>
+                            <span data-tr="Web Sitesini Ziyaret Et" data-en="Visit Website">Web Sitesini Ziyaret Et</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-tr="İletişim" data-en="Contact">İletişim</h2>
+            <p class="section-subtitle" data-tr="Benimle iletişime geçin" data-en="Get in touch with me">
+                Benimle iletişime geçin
+            </p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-tr="E-posta" data-en="Email">E-posta</h4>
+                            <a href="mailto:info@mehmetalparslan.com">info@mehmetalparslan.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-tr="Konum" data-en="Location">Konum</h4>
+                            <p>Ankara, Türkiye</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-socials">
+                        <h4 data-tr="Sosyal Medya" data-en="Social Media">Sosyal Medya</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/mehmetalparslan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mehmet-alp-arslan-504688331/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://instagram.com/mehmetalparslan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name" data-tr="Adınız" data-en="Your Name">Adınız</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email" data-tr="E-posta Adresiniz" data-en="Your Email">E-posta Adresiniz</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject" data-tr="Konu" data-en="Subject">Konu</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message" data-tr="Mesajınız" data-en="Your Message">Mesajınız</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" data-tr="Mesaj Gönder" data-en="Send Message">
+                        Mesaj Gönder
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mehmet Alp Arslan. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
