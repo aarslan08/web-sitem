@@ -978,6 +978,32 @@ body.dark-mode .portfolio-item:hover {
     flex-wrap: wrap;
 }
 
+.store-badge-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.3), rgba(239, 68, 68, 0.3));
+    border: 1px solid rgba(249, 115, 22, 0.5);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.store-badge-link:hover {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.5), rgba(239, 68, 68, 0.5));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+}
+
+.store-badge-link i {
+    font-size: 1.125rem;
+}
+
 .coming-soon-badge {
     display: inline-flex;
     align-items: center;
