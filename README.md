@@ -240,7 +240,7 @@ Bu proje kişisel kullanım içindir. İstediğiniz gibi özelleştirebilir ve k
 
 - **E-posta**: info@mehmetalparslan.com
 - **LinkedIn**: [linkedin.com/in/mehmetalparslan](https://linkedin.com/in/mehmetalparslan)
-- **GitHub**: [github.com/mehmetalparslan](https://github.com/mehmetalparslan)
+- **GitHub**: [github.com/mehmetalparslan](https://github.com/aarslan08)
 - **Instagram**: [instagram.com/mehmetalparslan](https://instagram.com/mehmetalparslan)
 
 ---
