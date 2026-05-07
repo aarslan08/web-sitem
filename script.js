@@ -41,6 +41,8 @@ const translations = {
         // Portfolio Section
         'Projeler': 'Projeler',
         'Son çalışmalarım ve projelerim': 'Son çalışmalarım ve projelerim',
+        'DoseTrack - İlaç Takip Uygulaması': 'DoseTrack - İlaç Takip Uygulaması',
+        'İlaç hatırlatma ve takip uygulaması. Kullanıcıların ilaçlarını zamanında almalarını sağlayan, doz takibi ve hatırlatma bildirimleri sunan sağlık odaklı mobil uygulama.': 'İlaç hatırlatma ve takip uygulaması. Kullanıcıların ilaçlarını zamanında almalarını sağlayan, doz takibi ve hatırlatma bildirimleri sunan sağlık odaklı mobil uygulama.',
         'Mindsy - Hafıza Oyunu': 'Mindsy - Hafıza Oyunu',
         'Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi.': 'Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi.',
         'App Store\'da İndir': 'App Store\'da İndir',
@@ -108,6 +110,8 @@ const translations = {
         // Portfolio Section
         'Projeler': 'Portfolio',
         'Son çalışmalarım ve projelerim': 'My recent works and projects',
+        'DoseTrack - İlaç Takip Uygulaması': 'DoseTrack - Medicine Tracker',
+        'İlaç hatırlatma ve takip uygulaması. Kullanıcıların ilaçlarını zamanında almalarını sağlayan, doz takibi ve hatırlatma bildirimleri sunan sağlık odaklı mobil uygulama.': 'Medicine reminder and tracking app. A health-focused mobile application that helps users take their medications on time with dose tracking and reminder notifications.',
         'Mindsy - Hafıza Oyunu': 'Mindsy - Memory Game',
         'Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi.': 'Fun and brain-boosting memory game app. Interactive gaming experience designed for kids and adults to strengthen memory.',
         'App Store\'da İndir': 'Download on App Store',
