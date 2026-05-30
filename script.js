@@ -1,539 +1,220 @@
-// ==================== Dil Metinleri ====================
-const translations = {
-    tr: {
-        // Navbar
-        'Ana Sayfa': 'Ana Sayfa',
-        'Hakkımda': 'Hakkımda',
-        'Hizmetler': 'Hizmetler',
-        'Projeler': 'Projeler',
-        'İletişim': 'İletişim',
-        
-        // Hero Section
-        'Merhaba, ben': 'Merhaba, ben',
-        'Ankara Hacı Bayram Veli Üniversitesi Ekonometri öğrencisi ve freelance yazılım geliştiriciyim. Mobil uygulama, web sitesi ve işletme yazılımları geliştiriyorum.': 'Ankara Hacı Bayram Veli Üniversitesi Ekonometri öğrencisi ve freelance yazılım geliştiriciyim. Mobil uygulama, web sitesi ve işletme yazılımları geliştiriyorum.',
-        'Ekonometri öğrencisi & Freelance geliştirici': 'Ekonometri öğrencisi & Freelance geliştirici',
-        'Benimle İletişime Geç': 'Benimle İletişime Geç',
-        
-        // About Section
-        'Hakkımda': 'Hakkımda',
-        'Merhaba! Ben Ankara Hacı Bayram Veli Üniversitesi Ekonometri Bölümü 3. sınıf öğrencisiyim.': 'Merhaba! Ben Ankara Hacı Bayram Veli Üniversitesi Ekonometri Bölümü 3. sınıf öğrencisiyim.',
-        'Ekonometri eğitimimin yanı sıra, yazılım geliştirme tutkuyla ilgileniyorum. Mobil uygulama geliştirme ve web tasarımı alanlarında kendimi geliştirerek, freelance projeler üzerinde çalışıyorum.': 'Ekonometri eğitimimin yanı sıra, yazılım geliştirme tutkuyla ilgileniyorum. Mobil uygulama geliştirme ve web tasarımı alanlarında kendimi geliştirerek, freelance projeler üzerinde çalışıyorum.',
-        'Hedefim, analitik düşünce yapımı ve teknik becerilerimi birleştirerek, kullanıcı odaklı ve etkili çözümler üretmek. Modern teknolojileri öğrenmek ve projelerimde uygulamak beni sürekli motive ediyor.': 'Hedefim, analitik düşünce yapımı ve teknik becerilerimi birleştirerek, kullanıcı odaklı ve etkili çözümler üretmek. Modern teknolojileri öğrenmek ve projelerimde uygulamak beni sürekli motive ediyor.',
-        'Teknolojiler': 'Teknolojiler',
-        'Yetenekler': 'Yetenekler',
-        
-        // Services Section
-        'Hizmetler': 'Hizmetler',
-        'Size sunduğum profesyonel hizmetler': 'Size sunduğum profesyonel hizmetler',
-        'Mobil Uygulama Geliştirme': 'Mobil Uygulama Geliştirme',
-        'iOS ve Android platformları için Flutter teknolojisi ile performanslı ve kullanıcı dostu mobil uygulamalar geliştiriyorum.': 'iOS ve Android platformları için Flutter teknolojisi ile performanslı ve kullanıcı dostu mobil uygulamalar geliştiriyorum.',
-        'Web Sitesi Geliştirme': 'Web Sitesi Geliştirme',
-        'Kurumsal web siteleri, e-ticaret platformları ve özel web uygulamaları tasarlıyor ve geliştiriyorum.': 'Kurumsal web siteleri, e-ticaret platformları ve özel web uygulamaları tasarlıyor ve geliştiriyorum.',
-        'QR Menü Sistemleri': 'QR Menü Sistemleri',
-        'Restoranlar ve kafeler için modern, temassız dijital menü çözümleri sunuyorum.': 'Restoranlar ve kafeler için modern, temassız dijital menü çözümleri sunuyorum.',
-        'Kafe & Restoran Yazılımları': 'Kafe & Restoran Yazılımları',
-        'Sipariş yönetimi, masa takibi ve stok kontrolü için entegre yazılım çözümleri geliştiriyorum.': 'Sipariş yönetimi, masa takibi ve stok kontrolü için entegre yazılım çözümleri geliştiriyorum.',
-        'İşletme Otomasyon': 'İşletme Otomasyon',
-        'İş süreçlerinizi dijitalleştiren ve otomatikleştiren özel yazılımlar üretiyorum.': 'İş süreçlerinizi dijitalleştiren ve otomatikleştiren özel yazılımlar üretiyorum.',
-        'UI/UX Tasarım': 'UI/UX Tasarım',
-        'Kullanıcı deneyimini ön planda tutan, modern ve estetik arayüz tasarımları oluşturuyorum.': 'Kullanıcı deneyimini ön planda tutan, modern ve estetik arayüz tasarımları oluşturuyorum.',
-        
-        // Portfolio Section
-        'Projeler': 'Projeler',
-        'Son çalışmalarım ve projelerim': 'Son çalışmalarım ve projelerim',
-        'DoseTrack - İlaç Takip Uygulaması': 'DoseTrack - İlaç Takip Uygulaması',
-        'İlaç hatırlatma ve takip uygulaması. Kullanıcıların ilaçlarını zamanında almalarını sağlayan, doz takibi ve hatırlatma bildirimleri sunan sağlık odaklı mobil uygulama.': 'İlaç hatırlatma ve takip uygulaması. Kullanıcıların ilaçlarını zamanında almalarını sağlayan, doz takibi ve hatırlatma bildirimleri sunan sağlık odaklı mobil uygulama.',
-        'Mindsy - Hafıza Oyunu': 'Mindsy - Hafıza Oyunu',
-        'Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi.': 'Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi.',
-        'App Store\'da İndir': 'App Store\'da İndir',
-        'Yakında Google Play\'de': 'Yakında Google Play\'de',
-        'VEBET - Veri Bilimi ve Ekonometri Topluluğu': 'VEBET - Veri Bilimi ve Ekonometri Topluluğu',
-        'Ankara Hacı Bayram Veli Üniversitesi öğrenci topluluğu için modern, responsive ve SEO uyumlu web sitesi. Yapay zeka, veri bilimi ve ekonometri odaklı içerik yönetim sistemi.': 'Ankara Hacı Bayram Veli Üniversitesi öğrenci topluluğu için modern, responsive ve SEO uyumlu web sitesi. Yapay zeka, veri bilimi ve ekonometri odaklı içerik yönetim sistemi.',
-        'Bağoğlu Hafriyat - İş Makinesi Kiralama': 'Bağoğlu Hafriyat - İş Makinesi Kiralama',
-        '25+ yıllık tecrübeli hafriyat firması için profesyonel kurumsal web sitesi. Online teklif sistemi, hizmet katalogu ve iletişim entegrasyonu ile tam teşekküllü dijital platform.': '25+ yıllık tecrübeli hafriyat firması için profesyonel kurumsal web sitesi. Online teklif sistemi, hizmet katalogu ve iletişim entegrasyonu ile tam teşekküllü dijital platform.',
-        'Siteyi Ziyaret Et': 'Siteyi Ziyaret Et',
-        'Web Sitesini Ziyaret Et': 'Web Sitesini Ziyaret Et',
-        
-        // Contact Section
-        'İletişim': 'İletişim',
-        'Benimle iletişime geçin': 'Benimle iletişime geçin',
-        'E-posta': 'E-posta',
-        'Konum': 'Konum',
-        'Sosyal Medya': 'Sosyal Medya',
-        'Adınız': 'Adınız',
-        'E-posta Adresiniz': 'E-posta Adresiniz',
-        'Konu': 'Konu',
-        'Mesajınız': 'Mesajınız',
-        'Mesaj Gönder': 'Mesaj Gönder',
-        
-        // Footer
-        'Tüm hakları saklıdır.': 'Tüm hakları saklıdır.'
-    },
-    en: {
-        // Navbar
-        'Ana Sayfa': 'Home',
-        'Hakkımda': 'About',
-        'Hizmetler': 'Services',
-        'Projeler': 'Portfolio',
-        'İletişim': 'Contact',
-        
-        // Hero Section
-        'Merhaba, ben': 'Hello, I\'m',
-        'Ankara Hacı Bayram Veli Üniversitesi Ekonometri öğrencisi ve freelance yazılım geliştiriciyim. Mobil uygulama, web sitesi ve işletme yazılımları geliştiriyorum.': 'Econometrics student at Ankara Hacı Bayram Veli University and freelance software developer. I develop mobile applications, websites and business software.',
-        'Ekonometri öğrencisi & Freelance geliştirici': 'Econometrics Student & Freelance Developer',
-        'Benimle İletişime Geç': 'Get In Touch',
-        
-        // About Section
-        'Hakkımda': 'About Me',
-        'Merhaba! Ben Ankara Hacı Bayram Veli Üniversitesi Ekonometri Bölümü 3. sınıf öğrencisiyim.': 'Hello! I\'m a 3rd year Econometrics student at Ankara Hacı Bayram Veli University.',
-        'Ekonometri eğitimimin yanı sıra, yazılım geliştirme tutkuyla ilgileniyorum. Mobil uygulama geliştirme ve web tasarımı alanlarında kendimi geliştirerek, freelance projeler üzerinde çalışıyorum.': 'Alongside my econometrics education, I\'m passionate about software development. I develop myself in mobile app development and web design, working on freelance projects.',
-        'Hedefim, analitik düşünce yapımı ve teknik becerilerimi birleştirerek, kullanıcı odaklı ve etkili çözümler üretmek. Modern teknolojileri öğrenmek ve projelerimde uygulamak beni sürekli motive ediyor.': 'My goal is to combine analytical thinking and technical skills to create user-focused and effective solutions. Learning modern technologies and applying them in my projects keeps me constantly motivated.',
-        'Teknolojiler': 'Technologies',
-        'Yetenekler': 'Skills',
-        
-        // Services Section
-        'Hizmetler': 'Services',
-        'Size sunduğum profesyonel hizmetler': 'Professional services I offer',
-        'Mobil Uygulama Geliştirme': 'Mobile App Development',
-        'iOS ve Android platformları için Flutter teknolojisi ile performanslı ve kullanıcı dostu mobil uygulamalar geliştiriyorum.': 'I develop high-performance and user-friendly mobile applications for iOS and Android platforms using Flutter technology.',
-        'Web Sitesi Geliştirme': 'Web Development',
-        'Kurumsal web siteleri, e-ticaret platformları ve özel web uygulamaları tasarlıyor ve geliştiriyorum.': 'I design and develop corporate websites, e-commerce platforms and custom web applications.',
-        'QR Menü Sistemleri': 'QR Menu Systems',
-        'Restoranlar ve kafeler için modern, temassız dijital menü çözümleri sunuyorum.': 'I offer modern, contactless digital menu solutions for restaurants and cafes.',
-        'Kafe & Restoran Yazılımları': 'Cafe & Restaurant Software',
-        'Sipariş yönetimi, masa takibi ve stok kontrolü için entegre yazılım çözümleri geliştiriyorum.': 'I develop integrated software solutions for order management, table tracking and inventory control.',
-        'İşletme Otomasyon': 'Business Automation',
-        'İş süreçlerinizi dijitalleştiren ve otomatikleştiren özel yazılımlar üretiyorum.': 'I produce custom software that digitizes and automates your business processes.',
-        'UI/UX Tasarım': 'UI/UX Design',
-        'Kullanıcı deneyimini ön planda tutan, modern ve estetik arayüz tasarımları oluşturuyorum.': 'I create modern and aesthetic interface designs that prioritize user experience.',
-        
-        // Portfolio Section
-        'Projeler': 'Portfolio',
-        'Son çalışmalarım ve projelerim': 'My recent works and projects',
-        'DoseTrack - İlaç Takip Uygulaması': 'DoseTrack - Medicine Tracker',
-        'İlaç hatırlatma ve takip uygulaması. Kullanıcıların ilaçlarını zamanında almalarını sağlayan, doz takibi ve hatırlatma bildirimleri sunan sağlık odaklı mobil uygulama.': 'Medicine reminder and tracking app. A health-focused mobile application that helps users take their medications on time with dose tracking and reminder notifications.',
-        'Mindsy - Hafıza Oyunu': 'Mindsy - Memory Game',
-        'Eğlenceli ve zeka geliştirici hafıza oyunu uygulaması. Çocuklar ve yetişkinler için tasarlanmış, hafızayı güçlendiren interaktif oyun deneyimi.': 'Fun and brain-boosting memory game app. Interactive gaming experience designed for kids and adults to strengthen memory.',
-        'App Store\'da İndir': 'Download on App Store',
-        'Yakında Google Play\'de': 'Coming Soon to Google Play',
-        'VEBET - Veri Bilimi ve Ekonometri Topluluğu': 'VEBET - Data Science and Econometrics Community',
-        'Ankara Hacı Bayram Veli Üniversitesi öğrenci topluluğu için modern, responsive ve SEO uyumlu web sitesi. Yapay zeka, veri bilimi ve ekonometri odaklı içerik yönetim sistemi.': 'Modern, responsive and SEO-friendly website for Ankara Hacı Bayram Veli University student community. AI, data science and econometrics focused content management system.',
-        'Bağoğlu Hafriyat - İş Makinesi Kiralama': 'Bağoğlu Hafriyat - Construction Equipment Rental',
-        '25+ yıllık tecrübeli hafriyat firması için profesyonel kurumsal web sitesi. Online teklif sistemi, hizmet katalogu ve iletişim entegrasyonu ile tam teşekküllü dijital platform.': 'Professional corporate website for 25+ years experienced excavation company. Full-featured digital platform with online quotation system, service catalog and contact integration.',
-        'Siteyi Ziyaret Et': 'Visit Website',
-        'Web Sitesini Ziyaret Et': 'Visit Website',
-        
-        // Contact Section
-        'İletişim': 'Contact',
-        'Benimle iletişime geçin': 'Get in touch with me',
-        'E-posta': 'Email',
-        'Konum': 'Location',
-        'Sosyal Medya': 'Social Media',
-        'Adınız': 'Your Name',
-        'E-posta Adresiniz': 'Your Email',
-        'Konu': 'Subject',
-        'Mesajınız': 'Your Message',
-        'Mesaj Gönder': 'Send Message',
-        
-        // Footer
-        'Tüm hakları saklıdır.': 'All rights reserved.'
-    }
-};
-
-// ==================== State Management ====================
-class AppState {
-    constructor() {
-        this.currentLang = localStorage.getItem('language') || 'tr';
-        // Varsayılan olarak karanlık mod açık, kullanıcı tercihi varsa onu kullan
-        const savedDarkMode = localStorage.getItem('darkMode');
-        this.isDarkMode = savedDarkMode === null ? true : savedDarkMode === 'true';
-        this.init();
-    }
-
-    init() {
-        this.applyTheme();
-        this.applyLanguage();
-    }
-
-    toggleTheme() {
-        this.isDarkMode = !this.isDarkMode;
-        localStorage.setItem('darkMode', this.isDarkMode);
-        this.applyTheme();
-    }
-
-    applyTheme() {
-        if (this.isDarkMode) {
-            document.body.classList.add('dark-mode');
-            const themeIcon = document.querySelector('.theme-toggle i');
-            if (themeIcon) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            }
-        } else {
-            document.body.classList.remove('dark-mode');
-            const themeIcon = document.querySelector('.theme-toggle i');
-            if (themeIcon) {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        }
-    }
-
-    toggleLanguage() {
-        this.currentLang = this.currentLang === 'tr' ? 'en' : 'tr';
-        localStorage.setItem('language', this.currentLang);
-        this.applyLanguage();
-    }
-
-    applyLanguage() {
-        const langText = document.getElementById('langText');
-        if (langText) {
-            langText.textContent = this.currentLang === 'tr' ? 'EN' : 'TR';
-        }
-
-        // HTML lang attribute
-        document.documentElement.lang = this.currentLang;
-
-        // Update all translatable elements
-        const elements = document.querySelectorAll('[data-tr]');
-        elements.forEach(element => {
-            const trKey = element.getAttribute('data-tr');
-            if (translations[this.currentLang] && translations[this.currentLang][trKey]) {
-                // Handle different element types
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.setAttribute('placeholder', translations[this.currentLang][trKey]);
-                } else if (element.tagName === 'BUTTON') {
-                    element.textContent = translations[this.currentLang][trKey];
-                } else {
-                    element.textContent = translations[this.currentLang][trKey];
-                }
-            }
-        });
-    }
-}
-
-// ==================== Navigation Controller ====================
-class NavigationController {
-    constructor() {
-        this.navbar = document.getElementById('navbar');
-        this.mobileToggle = document.getElementById('mobileToggle');
-        this.navMenu = document.getElementById('navMenu');
-        this.navLinks = document.querySelectorAll('.nav-link');
-        this.init();
-    }
-
-    init() {
-        this.setupScrollEffect();
-        this.setupMobileMenu();
-        this.setupSmoothScroll();
-    }
-
-    setupScrollEffect() {
-        let lastScroll = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            // Add scrolled class for shadow effect
-            if (currentScroll > 50) {
-                this.navbar.classList.add('scrolled');
-            } else {
-                this.navbar.classList.remove('scrolled');
-            }
-
-            lastScroll = currentScroll;
-        });
-    }
-
-    setupMobileMenu() {
-        if (this.mobileToggle && this.navMenu) {
-            this.mobileToggle.addEventListener('click', () => {
-                this.mobileToggle.classList.toggle('active');
-                this.navMenu.classList.toggle('active');
-            });
-
-            // Close menu when clicking on a link
-            this.navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    this.mobileToggle.classList.remove('active');
-                    this.navMenu.classList.remove('active');
-                });
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.nav-container')) {
-                    this.mobileToggle.classList.remove('active');
-                    this.navMenu.classList.remove('active');
-                }
-            });
-        }
-    }
-
-    setupSmoothScroll() {
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    const targetId = href.substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-    }
-}
-
-// ==================== Form Controller ====================
-class FormController {
-    constructor() {
-        this.form = document.getElementById('contactForm');
-        this.init();
-    }
-
-    init() {
-        if (this.form) {
-            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-        }
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-
-        // Validation
-        if (!this.validateForm(formData)) {
-            return;
-        }
-
-        // Show success message (in real scenario, this would send data to server)
-        this.showMessage('success');
-        this.form.reset();
-    }
-
-    validateForm(data) {
-        // Name validation
-        if (data.name.trim().length < 2) {
-            this.showMessage('error', 'Lütfen geçerli bir ad girin.');
-            return false;
-        }
-
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-            this.showMessage('error', 'Lütfen geçerli bir e-posta adresi girin.');
-            return false;
-        }
-
-        // Subject validation
-        if (data.subject.trim().length < 3) {
-            this.showMessage('error', 'Lütfen bir konu belirtin.');
-            return false;
-        }
-
-        // Message validation
-        if (data.message.trim().length < 10) {
-            this.showMessage('error', 'Mesajınız en az 10 karakter olmalıdır.');
-            return false;
-        }
-
-        return true;
-    }
-
-    showMessage(type, customMessage = '') {
-        const existingAlert = document.querySelector('.form-alert');
-        if (existingAlert) {
-            existingAlert.remove();
-        }
-
-        const alert = document.createElement('div');
-        alert.className = `form-alert ${type}`;
-        
-        if (type === 'success') {
-            alert.textContent = appState.currentLang === 'tr' 
-                ? 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağım.'
-                : 'Your message has been sent successfully! I will get back to you as soon as possible.';
-            alert.style.cssText = `
-                padding: 1rem 1.5rem;
-                background: linear-gradient(135deg, #10b981, #059669);
-                color: white;
-                border-radius: 0.5rem;
-                margin-top: 1rem;
-                animation: slideIn 0.3s ease-out;
-            `;
-        } else {
-            alert.textContent = customMessage;
-            alert.style.cssText = `
-                padding: 1rem 1.5rem;
-                background: linear-gradient(135deg, #ef4444, #dc2626);
-                color: white;
-                border-radius: 0.5rem;
-                margin-top: 1rem;
-                animation: slideIn 0.3s ease-out;
-            `;
-        }
-
-        this.form.appendChild(alert);
-
-        // Remove alert after 5 seconds
-        setTimeout(() => {
-            alert.style.animation = 'slideOut 0.3s ease-out';
-            setTimeout(() => alert.remove(), 300);
-        }, 5000);
-    }
-}
-
-// ==================== Animation Controller ====================
-class AnimationController {
-    constructor() {
-        this.observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-        this.init();
-    }
-
-    init() {
-        this.setupIntersectionObserver();
-    }
-
-    setupIntersectionObserver() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, this.observerOptions);
-
-        // Observe all sections
-        const sections = document.querySelectorAll('section');
-        sections.forEach((section, index) => {
-            if (section.id !== 'home') {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(30px)';
-                section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-                observer.observe(section);
-            }
-        });
-
-        // Observe service cards
-        const serviceCards = document.querySelectorAll('.service-card');
-        serviceCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
-            observer.observe(card);
-        });
-
-        // Observe portfolio items
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        portfolioItems.forEach((item, index) => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
-            observer.observe(item);
-        });
-    }
-}
-
-// ==================== App Initialization ====================
-let appState;
-let navigationController;
-let formController;
-let animationController;
+/* ===================================================================
+   Portfolio interactions — Mehmet Alp Arslan
+   =================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize app state
-    appState = new AppState();
-    
-    // Initialize controllers
-    navigationController = new NavigationController();
-    formController = new FormController();
-    animationController = new AnimationController();
-    
-    // Setup event listeners
-    setupEventListeners();
-});
 
-function setupEventListeners() {
-    // Theme toggle
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            appState.toggleTheme();
-        });
-    }
+    /* ---------- Constellation particle network (hero background) ---------- */
+    const canvas = document.getElementById('heroMatrix');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (canvas && !reduceMotion) {
+        const ctx = canvas.getContext('2d');
+        const hero = canvas.parentElement;
+        let w, h, dpr, particles;
+        const mouse = { x: -9999, y: -9999 };
+        const LINK = 132;          // max distance to draw a link
+        const GREEN = '0, 230, 150';
 
-    // Language toggle
-    const langToggle = document.getElementById('langToggle');
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            appState.toggleLanguage();
-        });
-    }
-}
+        const setup = () => {
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            w = hero.clientWidth; h = hero.clientHeight;
+            canvas.width = w * dpr; canvas.height = h * dpr;
+            canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            const count = Math.min(96, Math.round(w * h / 14000));
+            particles = Array.from({ length: count }, () => ({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                vx: (Math.random() - 0.5) * 0.35,
+                vy: (Math.random() - 0.5) * 0.35,
+                r: Math.random() * 1.6 + 0.8
+            }));
+        };
+        setup();
 
-// ==================== Performance Optimization ====================
-// Lazy load images when they become visible
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
+        const draw = () => {
+            ctx.clearRect(0, 0, w, h);
+
+            // move
+            for (const p of particles) {
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > w) p.vx *= -1;
+                if (p.y < 0 || p.y > h) p.vy *= -1;
+                // gentle pull toward cursor
+                const dxm = mouse.x - p.x, dym = mouse.y - p.y;
+                const dm = Math.hypot(dxm, dym);
+                if (dm < 160) { p.x += dxm * 0.0016; p.y += dym * 0.0016; }
+            }
+
+            // links
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const a = particles[i], b = particles[j];
+                    const dx = a.x - b.x, dy = a.y - b.y;
+                    const d = Math.hypot(dx, dy);
+                    if (d < LINK) {
+                        ctx.strokeStyle = `rgba(${GREEN}, ${(1 - d / LINK) * 0.32})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y);
+                        ctx.lineTo(b.x, b.y);
+                        ctx.stroke();
+                    }
+                }
+                // link to cursor
+                const a = particles[i];
+                const dcx = a.x - mouse.x, dcy = a.y - mouse.y;
+                const dc = Math.hypot(dcx, dcy);
+                if (dc < LINK + 30) {
+                    ctx.strokeStyle = `rgba(${GREEN}, ${(1 - dc / (LINK + 30)) * 0.4})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    ctx.stroke();
                 }
             }
+
+            // nodes
+            for (const p of particles) {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${GREEN}, 0.85)`;
+                ctx.fill();
+            }
+
+            requestAnimationFrame(draw);
+        };
+        requestAnimationFrame(draw);
+
+        hero.addEventListener('pointermove', (e) => {
+            const rect = hero.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+        hero.addEventListener('pointerleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+        let rT;
+        window.addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(setup, 200); });
+    }
+
+    /* ---------- Navbar scroll state ---------- */
+    const navbar = document.getElementById('navbar');
+    const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* ---------- Mobile menu ---------- */
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    navMenu.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            navMenu.classList.remove('active');
         });
     });
 
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
+    /* ---------- Language toggle (TR / EN) ---------- */
+    const langToggle = document.getElementById('langToggle');
+    const langText = document.getElementById('langText');
+    let lang = localStorage.getItem('site-lang') || 'tr';
+
+    const applyLang = (l) => {
+        document.documentElement.lang = l;
+        document.querySelectorAll('[data-tr]').forEach(el => {
+            const val = l === 'tr' ? el.getAttribute('data-tr') : el.getAttribute('data-en');
+            if (val === null) return;
+            if (val.includes('<')) el.innerHTML = val; else el.textContent = val;
+        });
+        // placeholders for inputs
+        document.querySelectorAll('[data-tr-ph]').forEach(el => {
+            el.placeholder = l === 'tr' ? el.getAttribute('data-tr-ph') : el.getAttribute('data-en-ph');
+        });
+        langText.textContent = l === 'tr' ? 'EN' : 'TR';
+        localStorage.setItem('site-lang', l);
+    };
+    applyLang(lang);
+    langToggle.addEventListener('click', () => {
+        lang = lang === 'tr' ? 'en' : 'tr';
+        applyLang(lang);
     });
-}
 
-// Add CSS for animations
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+    /* ---------- Scroll reveal ---------- */
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('in');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    @keyframes slideOut {
-        from {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        to {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-    }
-`;
-document.head.appendChild(style);
+    /* ---------- Service card cursor glow ---------- */
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('pointermove', (e) => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+            card.style.setProperty('--my', `${e.clientY - r.top}px`);
+        });
+    });
 
+    /* ---------- Animated hero stat counters ---------- */
+    const counters = document.querySelectorAll('.hero-stat .n[data-count]');
+    const animateCount = (el) => {
+        const target = parseFloat(el.getAttribute('data-count'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const dur = 1400;
+        const start = performance.now();
+        const step = (now) => {
+            const p = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            const val = Math.round(target * eased);
+            el.textContent = val + suffix;
+            if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+    const counterIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { animateCount(e.target); counterIO.unobserve(e.target); }
+        });
+    }, { threshold: 0.6 });
+    counters.forEach(c => counterIO.observe(c));
+
+    /* ---------- Contact form ---------- */
+    const form = document.getElementById('contactForm');
+    const note = document.getElementById('formNote');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const subject = encodeURIComponent(data.get('subject') || 'Web sitesi mesajı');
+        const body = encodeURIComponent(
+            `Ad: ${data.get('name')}\nE-posta: ${data.get('email')}\n\n${data.get('message')}`
+        );
+        window.location.href = `mailto:alparslann95@gmail.com?subject=${subject}&body=${body}`;
+        note.textContent = lang === 'tr'
+            ? 'E-posta uygulamanız açılıyor… Teşekkürler!'
+            : 'Opening your email app… Thank you!';
+        note.classList.add('show');
+        setTimeout(() => note.classList.remove('show'), 5000);
+        form.reset();
+    });
+
+    /* ---------- Active nav link on scroll ---------- */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const spy = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const id = e.target.id;
+                navLinks.forEach(l => l.style.color = l.getAttribute('href') === `#${id}` ? 'var(--text)' : '');
+            }
+        });
+    }, { threshold: 0.4 });
+    sections.forEach(s => spy.observe(s));
+});
