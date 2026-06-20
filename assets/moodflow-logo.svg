@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- app icon gradient background (squircle) -->
+    <linearGradient id="mf-base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7B5CFF"/>
+      <stop offset="0.58" stop-color="#FF5FA2"/>
+      <stop offset="1" stop-color="#FFA05B"/>
+    </linearGradient>
+    <radialGradient id="mf-v" cx="0.15" cy="0.10" r="0.75">
+      <stop offset="0" stop-color="#9A6CFF" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#9A6CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mf-p" cx="0.88" cy="0.18" r="0.72">
+      <stop offset="0" stop-color="#FF6FA6" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#FF6FA6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mf-pe" cx="0.80" cy="0.98" r="0.72">
+      <stop offset="0" stop-color="#FF9F6B" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#FF9F6B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mf-s" cx="0.05" cy="0.95" r="0.80">
+      <stop offset="0" stop-color="#5BC0FF" stop-opacity="0.8"/>
+      <stop offset="0.55" stop-color="#5BC0FF" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="mf-clip"><rect x="0" y="0" width="100" height="100" rx="28" ry="28"/></clipPath>
+
+    <!-- mascot gradients -->
+    <linearGradient id="g-rainbow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF6B6B"/>
+      <stop offset="0.18" stop-color="#FFA94D"/>
+      <stop offset="0.38" stop-color="#FFE066"/>
+      <stop offset="0.58" stop-color="#51CF66"/>
+      <stop offset="0.78" stop-color="#4DABF7"/>
+      <stop offset="1" stop-color="#B47AFA"/>
+    </linearGradient>
+    <linearGradient id="g-body" x1="0.35" y1="0" x2="0.65" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDD6FC"/>
+    </linearGradient>
+    <radialGradient id="g-cheek" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF9FBF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FF9FBF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="f-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#5B3DB8" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- squircle background -->
+  <g clip-path="url(#mf-clip)">
+    <rect x="0" y="0" width="100" height="100" fill="url(#mf-base)"/>
+    <rect x="0" y="0" width="100" height="100" fill="url(#mf-v)"/>
+    <rect x="0" y="0" width="100" height="100" fill="url(#mf-p)"/>
+    <rect x="0" y="0" width="100" height="100" fill="url(#mf-pe)"/>
+    <rect x="0" y="0" width="100" height="100" fill="url(#mf-s)"/>
+  </g>
+
+  <!-- Mo mascot -->
+  <g>
+    <path d="M10 62 A42 42 0 0 1 60 16" fill="none" stroke="url(#g-rainbow)" stroke-width="5.5" stroke-linecap="round" opacity="0.92"/>
+    <ellipse cx="50" cy="58" rx="28" ry="29.5" fill="url(#g-body)" filter="url(#f-shadow)"/>
+    <ellipse cx="39.5" cy="43" rx="9" ry="6" fill="#fff" opacity="0.55"/>
+    <ellipse cx="32" cy="64" rx="7" ry="5.5" fill="url(#g-cheek)"/>
+    <ellipse cx="68" cy="64" rx="7" ry="5.5" fill="url(#g-cheek)"/>
+    <ellipse cx="41.5" cy="55.5" rx="2.8" ry="4" fill="#201E38"/>
+    <ellipse cx="58.5" cy="55.5" rx="2.8" ry="4" fill="#201E38"/>
+    <circle cx="42.8" cy="53.8" r="1.1" fill="#fff"/>
+    <circle cx="59.8" cy="53.8" r="1.1" fill="#fff"/>
+    <path d="M43.5 63.5 Q50 71.5 56.5 63.5" fill="none" stroke="#201E38" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(70 12) scale(0.58)" filter="url(#f-shadow)">
+      <path d="M11.5 20C11.5 20 3 13.5 3 8 C3 5 5 3 7.5 3 C9.4 3 10.9 4.3 11.5 6.2 C12.1 4.3 13.6 3 15.5 3 C18 3 20 5 20 8 C20 13.5 11.5 20 11.5 20Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>
