@@ -520,6 +520,7 @@ body::after {
 }
 .project:hover .project-logo .tile { transform: scale(1.06) rotate(-3deg); }
 .project-logo .tile img { object-fit: contain; max-height: 100%; }
+.project-logo .tile > i { font-size: 3rem; color: var(--green); }
 
 .project-body { padding: 1.8rem; }
 .project-head { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
