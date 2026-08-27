@@ -217,4 +217,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.4 });
     sections.forEach(s => spy.observe(s));
+
+    /* ---------- GitHub contributions (live) ---------- */
+    const ghGrid = document.getElementById('ghGrid');
+    const ghTotal = document.getElementById('ghTotalNum');
+    if (ghGrid && ghTotal) {
+        fetch('https://github-contributions-api.jogruber.de/v4/aarslan08?y=last')
+            .then(r => r.json())
+            .then(data => {
+                ghTotal.textContent = data.total.lastYear.toLocaleString('tr-TR');
+                ghGrid.innerHTML = data.contributions.slice(-364).map(d => {
+                    const alpha = d.level === 0 ? 0 : 0.22 + d.level * 0.19;
+                    return `<span class="gh-cell" style="background:oklch(0.80 0.155 150 / ${alpha})" title="${d.date}: ${d.count}"></span>`;
+                }).join('');
+            })
+            .catch(() => { ghTotal.textContent = '—'; });
+    }
 });

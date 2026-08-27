@@ -413,6 +413,54 @@ body::after {
 .panel-head .dots i { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--bg-2); display: block; }
 .panel-head .dots i:first-child { background: var(--green); }
 
+.github-card {
+    background: var(--bg-1);
+    border: 1px solid var(--line);
+    border-radius: 1.1rem;
+    padding: 1.6rem;
+    text-align: center;
+}
+.gh-total {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.55rem;
+    font-family: var(--f-mono);
+    font-size: 0.85rem;
+    color: var(--text-3);
+    margin-bottom: 1.4rem;
+}
+.gh-total-num {
+    font-family: var(--f-display);
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--green);
+}
+.gh-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 3px;
+    overflow-x: auto;
+    padding-bottom: 0.4rem;
+    justify-content: center;
+}
+.gh-cell {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--bg-2);
+}
+.gh-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-family: var(--f-mono);
+    font-size: 0.82rem;
+    color: var(--text-3);
+    transition: color 0.3s;
+}
+.gh-link:hover { color: var(--green); }
+
 .stack-title { font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); margin-bottom: 1rem; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .skill-tag {
