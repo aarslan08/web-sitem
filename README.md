@@ -1,6 +1,6 @@
 # Mehmet Alp Arslan - Kişisel Portföy Web Sitesi
 
-Modern, sade ve profesyonel kişisel portföy web sitesi. Ekonometri öğrencisi ve freelance yazılım geliştirici olarak hizmetlerimi ve projelerimi sergileyen responsive bir platform.
+Modern, sade ve profesyonel kişisel portföy web sitesi. Girişimci, yazılım geliştirici ve Ekonometri öğrencisi olarak hizmetlerimi ve projelerimi sergileyen responsive bir platform.
 
 ## 🌟 Özellikler
 
